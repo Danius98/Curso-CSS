@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+}
+
+.cuadrado{
+    width: 400px;
+    height: 400px;
+    background: steelblue;
+    margin: 40px auto;
+    overflow: hidden;
+    animation-name: animaciones, animaciones2; /*Nombre de la animacion del keyframe*/
+    animation-duration: 3s; /*Duracion de la animacion*/
+    animation-timing-function: ease; /*Aceleracion de la transformacion de la animacion*/
+    animation-iteration-count: 1; /*Cuanto se repite la animacion*/
+    /* n | infinite */
+
+    animation-fill-mode: forwards; /*que sucede despues de la animacion*/
+    /* backwards | normal | forwards | both */
+
+    animation-direction: reverse; /*si empieza desde el inicio o el fin*/
+    /* normal | reverse | alternate | alternate-reverse*/
+    /*animation-direction: alternate;*/ /*empieza del 0 al 100% y del 100% al 0%*/
+
+    animation-delay: 2s; /*cuanto demora en ejecutar la animacion*/
+    animation-play-state: paused; /*la animacion sigue/  paused: la animacion se pausa*/
+    /*running | paused */
+    /*alternate-reverse: del 100% al 0% y luego al 100%*/
+    /* animation: animaciones 2s; */
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation: animaciones 2s forwards 2 ;
+}
+
+.cuadrado:hover{
+    animation-play-state: running;
+}
+
+@keyframes animaciones{
+    0%{
+        background: crimson;
+        /* transform: scale(.5); */
+        transform: rotate(0);
+
+    }
+    100%{
+        background: blue;
+        /* transform: scale(1) translate(100%); */
+        transform: rotate(360deg);
+    }
+}
+
+.spider{
+    width: 200px;
+    margin: 0 auto;
+    display: block;
+    /* background: yellow; */
+    animation: moveSpiderman 3s infinite,
+                bg 2s infinite;
+}
+
+@keyframes moveSpiderman {
+    0%{
+        transform: translateY(-50px);
+    }
+    30%{
+        transform: translate(0) rotate(5deg);
+    }
+    50%{
+        transform: rotate(-5deg);
+    }
+    75%{
+        transform: rotate(5deg);
+    }
+    100%{
+        transform: translateY(-50px);
+    }
+
+    to{
+        transform:translateY(0);
+
+    } 
+     0%{
+        background: #000;
+    }
+    30%{
+        background: crimson;
+        transform: scale(1.2);
+    }
+    70%{
+        background: steelblue;
+        transform: translate(100%);
+    }
+    100%{
+        background: tomato;
+    } 
+
+}
+
+/* @keyframes bg {
+    to{
+        background: crimson;
+    }
+    from{
+        background: tomato;
+    }
+} */
+

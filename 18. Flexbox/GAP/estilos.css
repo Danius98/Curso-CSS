@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+}
+
+.links{
+    margin: 20px;
+    padding: 20px;
+    display: inline-flex;
+    background: steelblue;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.link{
+    background: #fff;
+    padding: 10px 30px;
+    text-decoration: none;
+    color: slateblue;
+}
+
+.links :last-child{
+    margin-bottom: 0;
+}
+
+.container{
+    width: 90%;
+    height: 300px;
+    margin: 30px auto;
+    display: flex;
+    padding: 20px;
+    border: 3px solid #000;
+    gap: 10px;
+    flex-direction: row;
+}
+
+.item{
+    background: crimson;
+    color: #fff;
+    font-size: 2rem;
+    /* line-height: 200px; */
+    text-align: center;
+    /* width: 50%; */
+    flex-basis: 50%;
+    /* height: 100%; */
+    width: 100px;
+}
+
+.figure{
+    flex-basis: 50%;
+    height: 100%;
+    background-image: url(baikal.jpg);
+    background-position: center;
+}
+
+img{
+    height: 100%;
+    width: 100%;
+}

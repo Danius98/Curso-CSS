@@ -1,0 +1,26 @@
+/* bennettfreely.com/clippy */
+/* figma */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main{
+    display: flex;
+    height: 100vh;
+}
+
+.clip_path{
+    margin: auto;
+    width:700px;
+    height: 400px;
+    background: linear-gradient(crimson, steelblue);
+    /* clip-path: circle(50% at center right); */
+    /* clip-path: inset(50% 40%); */
+    /* top right bottom left */
+    /* clip-path: ellipse(40% 50%); */
+    /* clip-path: polygon(0 100%, 50% 0, 100% 100%); */
+    clip-path: url(#clip);
+}

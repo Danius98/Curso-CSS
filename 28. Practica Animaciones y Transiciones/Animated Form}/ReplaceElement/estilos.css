@@ -1,0 +1,14 @@
+input{
+    display: block;
+    margin-bottom: 2em;
+}
+
+input::after, img::after, p::after{
+    display: inline-block;
+    width: max-content;
+    content: "Soy un elemento after";
+    background: crimson;
+    color: #fff;
+    padding: 10px;
+    margin-left: 20px;
+}

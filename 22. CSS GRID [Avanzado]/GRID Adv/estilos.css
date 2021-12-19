@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.grid{
+    width: 90%;
+    /* max-width: 600px; */
+    height: 600px;
+    margin: 30px auto;
+    outline: 3px solid #000;
+    display: grid;
+    grid-template-columns: [linea1] 1fr [linea2] 1fr [linea3] 1fr [linea4];
+    grid-template-rows: [linea1] 1fr [linea2] 1fr [linea3];
+    grid-template-columns: [header-start main-start] 1fr 1fr 1fr 1fr [header-end main-end];
+    grid-template-rows: [header-start] 1fr [header-end main-start] 1fr 1fr[main-end];
+    grid-template-columns: repeat(4, [line-start] 1fr [line-end]);
+    grid-template-rows: repeat(3, [row-start] 1fr [row-end]);
+    grid-template-areas:
+    "header header header header"
+    "main main main sidebar"
+    "footer footer footer footer";
+    grid-template-columns: min-content max-content;
+    grid-template-rows: min-content max-content;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(max-content, 300px));
+    grid-template-columns: repeat(1,150px);
+    grid-template-rows: repeat(3,150px);
+    /* justify-items: start|end|center|stretch; */
+    /* align-items: start|end|center|stretch; */
+    /* place-items: align-items/justify-items; */
+    /* place-items: center center; */
+    /* justify-content: start|end|space-between|center|stretch; EJE HORIZONTAL */
+    /* align-content: start|end|space-between|center|stretch; EJE VERTICAL; */
+    /* grid:rows/columns; */
+    /* grid: 50% 50%/ repeat(3, 1fr) */
+    grid-template-columns: repeat(4, 1fr);
+    /* align-items: start; */
+    /* place-content: align-content justify-content; */
+    /* place-content: center; */
+
+}
+
+.grid__item{
+    padding: 20px 0;
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
+    /* order: 0; */
+}
+
+.grid :nth-child(1){
+    background: slateblue;
+    grid-column: linea2/linea4;
+    grid-row: linea2/linea3;
+    grid-column: line-start 2/line-start 4;
+    grid-row: row-start 2/row-end 3;
+    grid-column: header-start/header-end;
+    grid-row: header-start/header-end;
+    order: 1;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    z-index: 2;
+    align-self: stretch;
+    justify-self: stretch;
+    /* place-self: align justify; */
+    place-self: center;
+}
+
+.grid :nth-child(2){
+    background: crimson;
+    grid-area: header;
+    grid-column: main-start/main-end;
+    grid-row: main-start/main-end;
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.grid :nth-child(3){
+    background: coral;
+}
+
+.grid :nth-child(4){
+    background: indigo;
+    grid-column: footer-start/footer-end;
+    order: -1
+}
+

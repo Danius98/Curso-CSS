@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial;
+}
+
+.gallery h2{
+    /* width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: crimson; */
+    margin: 40px 0;
+    font-size: 35px;
+    border-bottom: 4px solid #4343a1;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.container{
+    font-size: 0;
+}
+
+.container img{
+    width: 30%;
+    height: 280px;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+    margin-bottom: 20px;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px rgba(0,0,0,.5);
+}

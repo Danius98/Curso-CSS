@@ -1,0 +1,127 @@
+:root{ /*Todo el documento html*/
+    background: steelblue;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.enlace{
+    display: block;
+    background: tomato;
+    color: #fff;
+    text-decoration: none;
+    padding: 20px;
+    border-bottom: 3px solid #ebd1db;
+}
+
+.enlace:link{ /*antes de haber visitado la pagina*/
+    background: burlywood;
+    color: black;
+}
+
+.enlace:visited{ /*cuando se haya visitado la pagina*/
+    background: crimson;
+}
+
+a.enlace:hover{
+    text-decoration: line-through;
+}
+
+.enlace:hover{ /*cuando se pasa el elemento con el cursor*/
+    padding: 40px 20px;
+    transition: .5s;
+}
+
+.enlace:active{
+    background: steelblue;
+    color: #fff;
+}
+
+.event{
+    display: inline-block;
+    margin-top: 30px;
+    margin-left: 20px;
+    background: crimson;
+    color: #fff;
+    text-decoration: none;
+    padding: 20px;
+}
+
+.event:active{
+    padding: 23px;
+}
+
+#target{
+    width: 100px;
+    height: 100px;
+    margin-top: 30px;
+    margin-left: 20px;
+    background: cyan;
+    transition: .3s;
+}
+
+#target:target{ /*cuando se clickea en el elemento con id target*/
+    margin-left: 50px;
+}
+
+.form{
+    width: 80%;
+    margin: 30px auto;
+    background: #f2f2f2;
+    box-shadow: 0 0 5px rgba(0,0,0,.5);
+    padding: 30px;
+}
+
+.form_title{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form:focus-within{ /*cuando se señala cualquier elemento dentro de form se cambia de color*/
+    background: darkcyan;
+}
+
+input{
+    display: block;
+}
+
+input[type="text"],
+input[type="email"]{
+    width: 100%;
+    padding: 12px 5px;
+    margin-bottom: 20px;
+    border: none;
+    /* outline: none; */
+}
+
+input[type="checkbox"]{
+    display: inline-block;
+}
+
+input:focus{
+    background: rgba(63, 20, 220, 0.25);
+}
+
+input[type="checkbox"]:checked + label{ /*Solo funciona con inputs checked or radius*/
+    /*Cuando esta en la pseudoclase checked modifica el hermano adyacente label*/
+    background: rgba(63, 20, 220, 0.25);
+}
+
+h3{
+    font-size: 2rem;
+    font-weight: normal;
+    font-family: 'Arial';
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h3:not(.title):not(:hover){ /*cualquier h3 que no tenga la clase title && que no sea pasado con el cursor*/
+    color: blue
+}
+
+h3:not(:hover){ /*cualquier h3 que no se le pase por encima*/
+    text-decoration: line-through;
+}

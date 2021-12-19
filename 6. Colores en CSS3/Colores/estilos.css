@@ -1,0 +1,23 @@
+/* flatuicolors.com */
+/* coolors.co */
+/* htmlcolorcodes.com */
+/* colourcode.de */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;;
+}
+
+.header{
+    padding: 45px 0;
+    color: rgb(255, 255, 255);
+    background: rgba(78,14,138,0.6);
+    background: #1b95aad5;
+    background: hsla(180, 40%, 20%, .5);
+    background: #ED4C67;
+}
+
+.title{
+    text-align: center;
+}

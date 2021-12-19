@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Arial';
+}
+
+.grid{
+    display: grid;
+    width: 95%;
+    height: 100vh;
+    outline: 3px solid slateblue;
+    margin: 1rem auto;
+    color: crimson;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    grid-template-areas:
+    "name name name name name name"
+    "image image image image image image"
+    "image image image image image image"
+    "image image image image image image"
+    "image image image image image image"
+    "bio bio bio power power power"
+    "bio bio bio power power power"
+}
+
+.grid__item{
+    color: #fff;
+    text-align: center;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.name{
+    background: darkgray;
+    grid-area: name;
+    font-size: 5.5rem;
+}
+
+.image{
+    background: crimson;
+    grid-area: image;
+}
+
+
+.powerstats{
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+    background: darkcyan;
+    grid-area: bio;
+    font-size: 1.3rem;
+}
+
+.appareance{
+    display: flex;
+    /*padding: 10px;*/
+    flex-direction: column;
+    align-items: center;
+    background: magenta;
+    grid-area: power;
+    font-size: 1.3rem;
+}
+
+@media screen and (max-width:360px){
+    .powerstats{
+        font-size: 1.1rem;
+    }
+    .appareance{
+        font-size: 1.1rem;
+    }
+}

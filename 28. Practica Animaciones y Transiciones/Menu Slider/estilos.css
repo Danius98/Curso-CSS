@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700&family=Lato:wght@300&family=Poppins:ital,wght@0,100;1,300;1,400;1,500;1,700&family=Raleway:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Roboto:wght@300;400;500&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+}
+
+.nav{
+    background: steelblue;
+    height: 80px;
+}
+
+.nav__container{
+    width: 90%;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav__checkbox{
+    display: none;
+}
+
+/* :checked + .nav__items{
+    transform: translate(0);
+} */
+
+.nav__checkbox:checked ~ .nav__items{
+    transform: unset;
+} 
+
+.nav__icon{
+    cursor: pointer;
+}
+
+.nav__img{
+    display: block;
+    width: 35px;
+}
+
+.nav__items{
+    position: fixed;
+    top: 80px;
+    right: 0;
+    background: indigo;
+    height: 100%;
+    width: 60%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    transform: translate(100%);
+    transition: .4s transform;
+}
+
+.nav__link{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+
+/* input{
+    margin: 40px;
+}
+
+:checked + label{
+    width: 200px;
+    height: 50px;
+} */
+

@@ -1,0 +1,72 @@
+/* whatismyviewport.com */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.title{
+    font-size: 3rem;
+    color: slateblue;
+    margin: 40px 0;
+    text-align: center;
+    font-family: monospace;
+}
+
+/* @media <media-type> and (expression){
+} */
+
+/* @media screen and (orientation:landscape){
+    .title{
+        color: cyan;
+        background: cyan;
+        height: 100vh;
+    }
+} */
+
+@media print{
+    .title{
+        color: steelblue;
+        font-size: 5rem;
+        text-align: right;
+        font-family: cursive;
+    }
+}
+
+@media screen and (max-width:600px){
+    .title{
+        background: black;
+        color: #fff;
+        border-bottom: 3px solid crimson;
+    }
+}
+
+/* @media screen and (orientation:portrait){
+    .title{
+        margin: 0;
+        color: steelblue;
+        background: #000;
+        height: 100vh;
+    }
+} */
+
+@media screen and (orientation:portrait) and (max-width:600px){
+    .title{
+        text-align: left;
+        background-color: steelblue;
+    }
+}
+
+@media screen and (max-width:400px), (min-width:900px){
+    .title{
+        background: black;
+        color: wheat;
+    }
+}
+
+@media screen and (min-width:700px){
+    body{
+        background: crimson;
+    }
+}

@@ -1,0 +1,42 @@
+/* cssgradient.io */
+/* webgradients.com */
+/* uigradients.com */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 80%;
+    height: 400px;
+    margin: 30px auto;
+    background: steelblue;
+    background-image:
+    linear-gradient(yellow 50%, steelblue 50%, crimson 80%);
+    /* linear-gradient:(direction, color stop, color stop);  */
+}
+
+.header{
+    height: 650px;
+    background-image:linear-gradient(rgba(0, 0, 139, 0.5), rgba(17, 68, 109, 0.5)), url(womanworking.jpg);
+    background-image: linear-gradient(120deg, #a6c0fe7a 0%, #f680847e 100%), url(womanworking.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0.1px;
+    /* background: rgb(254,6,2);
+    background: linear-gradient(0deg, rgba(254,6,2,1) 20%, rgba(3,21,247,1) 40%, rgb(250, 246, 5) 60%);  COLOMBIA GRADIENT*/
+    /*background: #b92b27;  /* fallback for old browsers */
+    /*background: -webkit-linear-gradient(to right, #1565C0, #b92b27);  /* Chrome 10-25, Safari 5.1-6 */
+    /*background: linear-gradient(to right, #1565C0, #b92b27); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.title{
+    font-size: 60px;
+    text-align: center;
+    margin-top: 350px;
+    font-family: 'Arial';
+    color: #ffff;
+}

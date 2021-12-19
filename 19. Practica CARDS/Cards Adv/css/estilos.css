@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700&family=Lato:wght@300&family=Poppins:ital,wght@0,100;1,300;1,400;1,500;1,700&family=Raleway:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Roboto:wght@300;400;500&display=swap');
+
+:root{
+    --color-price: #26293A;
+    --color-features: #9C9191;
+    --color-boton: #fff;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.card{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-image: linear-gradient(360deg, var(--color-price) 50%, #fff 50%);
+    flex-wrap: wrap;
+}
+
+.card__item{
+    max-width: 350px;
+    width: 30%;
+    box-shadow: 0 0 50px rgba(0,0,0,.5);
+    text-align: center;
+    padding: 40px 0;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.card__item--active{
+    background: #5175FF;
+    --color-price: #fff;
+    --color-features: #fff;
+    --color-boton: #26293A;
+}
+
+.card__plan{
+    color: var(--color-price);
+    margin-bottom: 20px;
+}
+
+.card__price{
+    font-size: 3rem;
+    color: var(--color-price);
+}
+
+.card__features{
+    color: var(--color-features);
+    margin-bottom: 25px;
+}
+
+.card__features--margin{
+    margin: 30px 0 50px;
+}
+
+.card__features:nth-last-of-type(1){
+    margin-bottom: 50px;
+}
+
+.card__cta{
+    display: inline-block;
+    background: var(--color-price);
+    color: var(--color-boton);
+    width: 190px;
+    text-align: center;
+    padding: 20px 0;
+    text-decoration: none;
+    border-radius: 40px;
+}
+
+@media screen and (max-width:700px){
+    .card{
+        background: #fff;
+    }
+
+    .card__item{
+        width: 45%;
+        margin: 40px 0;
+    }
+}
+
+@media screen and (max-width:450px){
+    .card__item{
+        width: 90%;
+    }
+
+}

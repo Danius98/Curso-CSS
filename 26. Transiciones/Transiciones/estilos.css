@@ -1,0 +1,47 @@
+/* cssreference */
+/* cubic-bezier.com */
+
+.container{
+    outline: 1px solid #000;
+    width: 90%;
+    height: 500px;
+    margin: 30px auto;
+}
+
+.element{
+    background: crimson;
+    width: 120px;
+    height: 120px;
+    color: #fff;
+    font-family: Arial;
+    position: relative;
+    /* transition: all 1s; */
+    left: 0;
+    clip-path: circle(70%);
+    /* property|duration|timing-function|delay */
+    /* transition-property: clip-path, transform, color;
+    /* transition-duration: .5s, 4s, .3s; */
+    /* transition-duration: 1.5s;
+    transition-timing-function: cubic-bezier(.54,.01,1,-0.49); */
+    /* ease|linear|ease-in|ease-out|ease-in-out| 
+    transition-delay: 0s, 3s; */
+    transition: clip-path .5s 0s,
+                transform 1s .5s;
+}
+
+/* ease: aumenta la aceleracion a la mitad
+ease-in: aceleracion inicial
+ease-in-out: acelera/frena/acelera/frena
+ease-out: acelracion final
+linear: aceleracion linear
+step: pasos antes de hacer la transicion */
+
+.element:hover{
+    /* background: steelblue; */
+    transform: translate(100%) scale(.5);
+    clip-path: circle(50%);
+    color: #000;
+    /* transition: all 1s;
+    left: 80px;
+    text-align: right; */
+}

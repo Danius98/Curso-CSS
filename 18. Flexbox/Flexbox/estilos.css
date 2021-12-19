@@ -1,0 +1,95 @@
+/* flex grow: incrementa los elementos de acuerdo a su tamañoa base
+flex shrink: encoje los elementos de acuerdo a su tamaño base */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Arial';
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    /* align-content: center; */
+    /* flex-flow: column wrap; */
+    /* justify-content: space-between; */
+    /* max-width: 600px; */
+    height: 600px;
+    margin: 30px auto;
+    outline: 2px solid rgb(17, 8, 8);
+    /* width: 90%; */
+    width: 400px;
+}
+
+.item{
+    width: 80px; 
+    --height: 80px; 
+    background: tomato;
+    height: var(--height); 
+    line-height: var(--height);
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    font-family: sans-serif;
+    /* flex-basis: 0;
+    flex-grow: 1; */
+    /* flex grow shrink basis; */
+    /* flex: 1; */
+}
+
+/* Cuando un contenedor que en teoria deberia tener espacio con flex-grow equitativo no lo tiene, 
+se pone flex-basis en 0 */
+
+.item1{
+    /* order: 1; */
+    background: orange;
+    align-self: center;
+    /* center, flex-start, flex-end, center, baseline */
+    /* flex-shrink: 3; */
+}
+
+.item2{
+    /* order: 4; */
+    /* line-height: 15rem;
+    font-size: 5rem;
+    height: 10rem; */
+    background: darkblue;
+    /* align-self: stretch;
+    height: auto; */
+    margin-left: auto;
+}
+
+.item3{
+    /* order: 2; */
+    background: red;
+}
+
+.item4{
+    /* order: -2; */
+    background: steelblue;
+}
+
+.cta{
+    display: inline-block;
+    padding: 15px 30px;
+    background: slateblue;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* @media screen and (min-width:600px){
+    .container{
+        flex-direction: column;
+    }
+
+    .item4{
+        order:-1;
+    }
+} */
