@@ -1,0 +1,26 @@
+h2,h3{ /*cualquier elemento h2 y h3*/
+    font-size:25px;
+    font-family: 'Arial';
+}
+
+/* nav.contenedor{ /*un elemento nav que contiene la clase contenedor
+    background: steelblue
+} */
+
+.contenedor a{ /*cualquier elemento a dentro del contenedor contenedor*/
+    text-decoration: none;
+    color: firebrick;
+}
+
+.contenedor>a{ /*solo elementos a hijos directos de contenedor*/
+    font-size: 20px;
+    font-weight: bold;
+}
+
+h2+p{  /*elemento h2 que tenga un hermano p*/
+    color: gold;
+}
+
+h3~p{ /*todos los elementos p que van despues del h3*/
+    color: indigo;
+}
